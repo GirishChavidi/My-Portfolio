@@ -1,0 +1,206 @@
+/* ================= PROJECT SECTION ================= */
+#project {
+  padding: 90px 8%;
+  background: #ffffff;
+}
+
+/* 🔥 THIS FIXES LEFT ALIGN ISSUE (GRID LAYOUT) */
+.project-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* ================= PROJECT CARD ================= */
+.project-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.35s ease;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-12px) scale(1.01);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= IMAGE ================= */
+.project-image-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.08);
+}
+
+/* ================= CONTENT ================= */
+.project-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1f3c88;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.project-description {
+  font-size: 16px;
+  color: #6b7280;
+  margin-bottom: 18px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ================= TECH STACK ================= */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-badge {
+  background: #eef2ff;
+  color: #1f3c88;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 1px solid #e0e7ff;
+}
+
+/* ================= BUTTONS ================= */
+.project-buttons {
+  margin-top: auto; /* pushes buttons to bottom */
+  display: flex;
+  gap: 12px;
+}
+
+.btn-github,
+.btn-live {
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-github {
+  background: #111827;
+  color: white;
+}
+
+.btn-github:hover {
+  background: #000000;
+  transform: translateY(-2px);
+}
+
+.btn-live {
+  background: #1f3c88;
+  color: white;
+}
+
+.btn-live:hover {
+  background: #162d66;
+  transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE (VERY IMPORTANT) ================= */
+@media (max-width: 1024px) {
+  .project-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  #project {
+    padding: 70px 5%;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr; /* single column on mobile */
+  }
+
+  .project-image-wrapper {
+    height: 200px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .project-description {
+    font-size: 15px;
+  }
+}
+/* ================= TABLET ================= */
+@media (max-width: 1024px) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  #project {
+    padding: 70px 5%;
+  }
+
+  .project-container {
+    grid-template-columns: 1fr; /* 🔥 Single column mobile */
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .project-image-wrapper {
+    height: 200px;
+  }
+
+  .project-title {
+    font-size: 20px;
+  }
+
+  .project-description {
+    font-size: 15px;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-github,
+  .btn-live {
+    text-align: center;
+    width: 100%;
+  }
+}

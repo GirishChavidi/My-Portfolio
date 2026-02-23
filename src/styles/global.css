@@ -1,0 +1,387 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= ROOT THEME (PREMIUM COLORS) ================= */
+:root {
+  --primary: #1f3c88;
+  --secondary: #4f46e5;
+  --text-dark: #111827;
+  --text-light: #6b7280;
+  --bg-main: #ffffff;
+  --bg-soft: #f8fafc;
+  --border: #e5e7eb;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  --hover-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: "Poppins", "Segoe UI", sans-serif;
+  background: var(--bg-main);
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ================= GLOBAL SECTION SPACING ================= */
+section {
+  padding: 100px 8%;
+  width: 100%;
+}
+
+/* Alternate soft background (premium look) */
+section:nth-child(even) {
+  background: var(--bg-soft);
+}
+
+/* ================= CONTAINER (CENTER FIX) ================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ================= SECTION TITLE (PREMIUM TYPOGRAPHY) ================= */
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--primary);
+  position: relative;
+  letter-spacing: 0.5px;
+}
+
+/* Stylish underline effect */
+.section-title::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  display: block;
+  margin: 14px auto 0;
+  border-radius: 10px;
+}
+
+/* ================= HEADINGS ================= */
+h1 {
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+p {
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+/* ================= LINKS ================= */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+/* ================= BUTTONS (PREMIUM STYLE) ================= */
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 12px 28px;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: #162d66;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  padding: 10px 26px;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* ================= CARD BASE (USED IN PROJECTS & SKILLS) ================= */
+.card {
+  background: white;
+  border-radius: 18px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border);
+  transition: all 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--hover-shadow);
+}
+
+/* ================= IMAGE GLOBAL ================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= FLEX UTILITIES ================= */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ================= SCROLLBAR (PREMIUM TOUCH) ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c7d2fe;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5b4fc;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  section {
+    padding: 80px 6%;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  section {
+    padding: 70px 5%;
+  }
+
+  h1 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
+ 
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+  section {
+    padding: 60px 5%;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Better container scaling */
+.container,
+.header-container,
+.skills-container,
+.project-container,
+.contact-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* iOS Safari font rendering fix */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Fix button tap on mobile */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+/* ===== PROFESSIONAL PORTFOLIO BACKGROUND SYSTEM ===== */
+body {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f8fafc 40%,
+    #eef2ff 100%
+  );
+  color: #111827;
+  min-height: 100vh;
+}
+
+/* Alternate section background for visual separation */
+section:nth-child(even) {
+  background: #f8fafc;
+}
+
+body {
+  background: radial-gradient(
+      circle at top,
+      #1e3a8a 0%,
+      #0f172a 40%,
+      #020617 100%
+  );
+  color: #f8fafc;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Alternate sections  */
+section:nth-child(even) {
+  background: linear-gradient(
+    180deg,
+    #020617 0%,
+    #0f172a 100%
+  );
+}
+
+/* Hero Royal Glow */
+.hero {
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 175, 55, 0.08) 0%,
+    transparent 60%
+  );
+}
+.section-title {
+  background: linear-gradient(90deg, #d4af37, #facc15, #d4af37);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+.project-card,
+.skill-card,
+.contact-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  color: #cdd832;
+}
+
+.project-card:hover,
+.skill-card:hover {
+  border-color: #d4af37;
+  box-shadow: 0 20px 60px rgba(212, 175, 55, 0.25);
+}
+.header {
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.logo {
+  color: #facc15; /* Royal gold logo */
+}
+
+.nav a {
+  color: #e5e7eb;
+}
+
+.nav a:hover {
+  color: #d4af37;
+}

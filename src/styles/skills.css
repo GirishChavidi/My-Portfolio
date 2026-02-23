@@ -1,0 +1,133 @@
+/* ================= ROYAL SKILLS SECTION ================= */
+#skills {
+  padding: 100px 8%;
+  text-align: center;
+
+  /* 🔥 Royal Blue Cinematic Background */
+  background: linear-gradient(
+    180deg,
+    #020617 0%,
+    #0f172a 60%,
+    #020617 100%
+  );
+  color: #f8fafc;
+  position: relative;
+}
+
+/* Subtle gold glow overlay (poster style) */
+#skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 175, 55, 0.08),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+/* ================= MAIN GRID ================= */
+.skills-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+  padding-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= ROYAL GLASS SKILL CARD ================= */
+.skill-card {
+  background: rgba(15, 23, 42, 0.65); /* glass royal */
+  border-radius: 16px;
+  padding: 18px 22px;
+  font-size: 16px;
+  font-weight: 600;
+
+  /* Royal Text */
+  color: #f8fafc;
+
+  /* Gold border */
+  border: 1px solid rgba(212, 175, 55, 0.25);
+
+  /* Premium glass effect */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Deep shadow */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+
+  transition: all 0.4s ease;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.4px;
+}
+
+/* ================= ROYAL HOVER (GOLD GLOW) ================= */
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.05);
+
+  /* Gold glow border */
+  border: 1px solid #d4af37;
+
+  /* Royal gold glow */
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.6),
+    0 0 25px rgba(212, 175, 55, 0.35);
+
+  /* Cinematic gold tint */
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.85),
+    rgba(30, 58, 138, 0.25)
+  );
+}
+
+/* Skill text */
+.skill-name {
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+/* ================= ROYAL GOLD SECTION TITLE SUPPORT ================= */
+#skills .section-title {
+  margin-bottom: 60px;
+}
+
+/* ================= RESPONSIVE (Tablet) ================= */
+@media (max-width: 1024px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+}
+
+/* ================= MOBILE (Android + iOS) ================= */
+@media (max-width: 768px) {
+  #skills {
+    padding: 80px 5%;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .skill-card {
+    font-size: 14px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+}
+
+/* Small phones (iPhone SE, small Android) */
+@media (max-width: 480px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
