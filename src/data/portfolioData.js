@@ -78,7 +78,7 @@ projects: [
     ],
     github:
       "https://github.com/GirishChavidi/AI-Workforce-Students-QR",
-    live: "https://ui.aiworkforce.in"
+    live: "https://ui.aiworkforce.in/preview/62a891f24e502da8510c52f2cef08e8b"
   },
 
   {
@@ -116,7 +116,7 @@ projects: [
 
   {
     title: "React Job Dashboard",
-    image: jobDashboard, // replace with actual dashboard image
+    image: jobDashboard, 
     description:
       "Interactive job dashboard with filtering logic, reusable UI components, and dynamic state management.",
     tech: [
@@ -126,11 +126,11 @@ projects: [
       "Responsive Design"
     ],
     github:
-      "https://github.com/GirishChavidi/REACT-JOB-DASHBOARD", // replace
-    live: "https://girishjobfinder.netlify.app/" // replace
+      "https://github.com/GirishChavidi/REACT-JOB-DASHBOARD",
+    live: "https://girishjobfinder.netlify.app/" 
   }
 ],
-  // ================= QR DEMO =================
+
   qrDemoImage: qrDemo,
   qrDescription:
     "Live QR verification result from deployed system where each QR uniquely verifies student profile and project details via secure API."
