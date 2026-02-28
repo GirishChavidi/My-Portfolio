@@ -78,7 +78,7 @@ projects: [
     ],
     github:
       "https://github.com/GirishChavidi/AI-Workforce-Students-QR",
-    live: "https://ui.aiworkforce.in/preview/62a891f24e502da8510c52f2cef08e8b"
+    live: "https://ui.aiworkforce.in/preview/d08738d07589920ea186b45dbf6060af"
   },
 
   {
